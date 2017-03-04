@@ -4,9 +4,13 @@ Best viewed with Internet Explorer or Chrome.
 
 Known bugs:
 
-1. Firefox cannot recognise the font
+1. Firefox cannot recognise the font, mrt station buttons don't work properly
 
 2. "Return to Home" animation is glitchy
+
+3. Mobile cannot zoom out (possibly due to width: 100% ?)
+
+4. Swiping right even at step 5 of the "Guide" can lead you to the MRT line pages.
 
 "Guide" section bugs (refreshing will fix this):
 
