@@ -1,0 +1,662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<!--
+
+======================================SWIPING STUFF====================================
+
+-->
+  
+  <link rel="stylesheet" href="themes/theme1.min.css">
+
+  
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css">
+
+  
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  
+  <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+  
+  <script>
+$(document).on('swipeleft swiperight', function (event) {
+// next page
+if (event.type == 'swipeleft') {
+var nextPage = $.mobile.activePage.next('[data-role=page]');
+if (nextPage) {
+$.mobile.changePage(nextPage, {
+transition: "slide" // or any transition
+});
+}
+}
+// previous page
+if (event.type == 'swiperight') {
+var prevPage = $.mobile.activePage.prev('[data-role=page]');
+if (prevPage) {
+$.mobile.changePage(prevPage, {
+transition: "slide",
+reverse: true // reverse effect
+});
+}
+}
+});
+  </script><!--
+
+===================================CSS FORMATTING===============================
+
+-->
+  
+  <style>
+ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+li
+{
+display:inline;
+}
+
+a{
+text-decoration: none;
+color: white;
+}
+
+.mrtlines{
+color: grey;
+}
+
+.mrtlines[tabindex]:focus{
+color: white;
+outline: none;
+}
+
+.big{
+position: absolute;
+width: 53px;
+height: 53px;
+}
+
+.small{
+position: absolute;
+width: 50px;
+height: 50px;
+};
+  </style><!--
+
+===============================JAVASCRIPT FOR MRT LINES===============================
+
+-->
+  
+  <script type="text/javascript">
+function replaceImage(x){
+var myList = document.getElementsByClassName("button");
+myList[x].src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/whitemrtbutton_zps70b4f734.png";
+};
+
+function linkPage(y)
+{
+switch(y){
+case 'Pasir Ris':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Pasir Ris Itinerary.html";
+break;
+
+case 'Tanah Merah':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Tanah Merah Itinerary.html";
+break;
+
+case 'Paya Lebar':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Paya Lebar Itinerary.html";
+break;
+
+case 'Lavender':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Lavender Itinerary.html";
+break;
+
+case 'Bugis':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Bugis Itinerary.html";
+break;
+
+case 'City Hall':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/City Hall Itinerary.html";
+break;
+
+case 'Raffles Place':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Raffles Place Itinerary.html";
+break;
+
+case 'Tanjong Pagar':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Tanjong Pagar Itinerary.html";
+break;
+
+case 'Jurong East':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Jurong East Itinerary.html";
+break;
+
+case 'Chinese Garden':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Chinese Garden Itinerary.html";
+break;
+
+case 'Boon Lay':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Boon Lay Itinerary.html";
+break;
+
+case 'Joo Koon':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Joo Koon Itinerary.html";
+break;
+
+case 'Bayfront':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Bayfront Itinerary.html";
+break;
+
+case 'Dhoby Ghaut':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Dhoby Ghaut Itinerary.html";
+break;
+
+case 'Bras Basah':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Bras Basah Itinerary.html";
+break;
+
+case 'Esplanade':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Esplanade Itinerary.html";
+break;
+
+case 'Promenade':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Promenade Itinerary.html";
+break;
+
+case 'Nicoll Highway':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Nicoll Highway Itinerary.html";
+break;
+
+case 'Dakota':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Dakota Itinerary.html";
+break;
+
+case 'Serangoon':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Serangoon Itinerary.html";
+break;
+
+case 'Tai Seng':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Tai Seng Itinerary.html";
+break;
+
+case 'Botanic Gardens':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Botanic Gardens Itinerary.html";
+break;
+
+case 'Farrer Road':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Farrer Road Itinerary.html";
+break;
+
+case 'one-north':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/one-north Itinerary.html";
+break;
+
+case 'Haw Par Villa':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Haw Par Villa Itinerary.html";
+break;
+
+case 'Pasir Panjang':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Pasir Panjang Itinerary.html";
+break;
+
+case 'Telok Blangah':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Telok Blangah Itinerary.html";
+break;
+
+case 'HarbourFront':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/HarbourFront Itinerary.html";
+break;
+case 'Jurong East':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Jurong East Itinerary.html";
+break;
+
+case 'Bukit Gombak':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Bukit Gombak Itinerary.html";
+break;
+
+case 'Choa Chu Kang':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Choa Chu Kang Itinerary.html";
+break;
+
+case 'Kranji':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Kranji Itinerary.html";
+break;
+
+case 'Toa Payoh':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Toa Payoh Itinerary.html";
+break;
+
+case 'Newton':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Newton Itinerary.html";
+break;
+
+case 'Somerset':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Somerset Itinerary.html";
+break;
+
+case 'Dhoby Ghaut':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Dhoby Ghaut Itinerary.html";
+break;
+
+case 'City Hall':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/City Hall Itinerary.html";
+break;
+
+case 'Raffles Place':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Raffles Place Itinerary.html";
+break;
+
+case 'HarbourFront':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/HarbourFront Itinerary.html";
+break;
+
+case 'Chinatown':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Chinatown Itinerary.html";
+break;
+
+case 'Clarke Quay':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Clarke Quay Itinerary.html";
+break;
+
+case 'Dhoby Ghaut':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Dhoby Ghaut Itinerary.html";
+break;
+
+case 'Little India':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Little India Itinerary.html";
+break;
+
+case 'Serangoon':
+window.location="http://scholar-milk.i2r.a-star.edu.sg/mimas-v4/mimasrt/trail/iprobe!sg(2)/cnt/Serangoon Itinerary.html";
+}
+};
+  </script><!--
+
+===============================IMAGE PRELOADING===============================
+
+-->
+  
+  <script type="text/javascript">
+if (document.images) {
+img1 = new Image();
+img1.src = "http://i1365.photobucket.com/albums/r750/pilbol/EWLine_zps026a82e8.png";
+img2 = new Image();
+img2.src = "http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/whitemrtbutton_zps70b4f734.png";
+img3 = new Image();
+img3.src = "http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png";
+img4 = new Image();
+img4.src = "http://i1365.photobucket.com/albums/r750/pilbol/CCLine_zpsbab63942.png";
+img5 = new Image();
+img5.src = "http://i1365.photobucket.com/albums/r750/pilbol/NSLine_zps9d336f16.png";
+img6 = new Image();
+img6.src = "http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/NELine/NELine_zps329bd1e0.png";
+}
+  </script><!--
+============================TITLE===========================
+-->
+  <title>Main Page</title>
+
+  
+</head><body style="color: white; background-color: black; font-family: Segoe UI Light;" alink="white" link="white" vlink="white">
+<!--
+
+===========================================MAINPAGE===================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; font-size: x-large; color: white;" data-role="page" id="mainpage">
+<div data-role="content">
+<p style="background-color: black; font-family: Segoe UI Light;"><font size="+3"><big style="font-weight: bold;"><br>
+</big></font></p>
+<p style="background-color: black; font-family: Segoe UI Light;"><font size="+3"><big style="font-weight: bold;"><br>
+</big></font></p>
+<p style="background-color: black; font-family: Segoe UI Light;"><br>
+</p>
+<p style="background-color: black; font-family: Segoe UI Light;"><br>
+</p>
+<p style="background-color: black; font-family: Segoe UI Light;"><font size="+3"><big style="font-weight: bold;"><br>
+</big></font></p>
+<br>
+<p style="background-color: black; font-family: Segoe UI Light;"><br>
+</p>
+<p style="background-color: black; font-family: Segoe UI Light;"><br>
+</p>
+<br>
+<br>
+<p style="background-color: black; font-family: Segoe UI Light;"><big><big><big><big><font size="+3"><big><big><big><big><big style="font-weight: bold;"><big>iProbe
+SG</big> <br>
+</big></big></big></big></big></font></big></big></big></big></p>
+<!--
+
+=====================================MAINPAGE: GETTING STARTED (GUIDE)==================================
+
+-->
+<p style="background-color: black; font-family: Segoe UI Light;"><big><big><big><big><font size="+3"><big><big><big><big><big style="font-weight: bold;"><small>getting
+started</small></big></big></big></big></big></font></big></big></big></big></p>
+<div style="text-align: center;"><big> </big><big> </big><big>
+</big></div>
+<ul style="text-align: center;">
+  <ul>
+    <ul>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li><br>
+                <style="background-color: black;="" font-family:="" segoe="" ui="" light;=""></style="background-color:></li>
+              <li style="text-align: center;"><style="background-color: black;="" font-family:="" segoe="" ui="" light;=""><big><big><big><font size="+3"><big><big><big><a href="#guidepg1" data-transition="slideup">guide</a></big></big></big></font>&nbsp;&nbsp;&nbsp;
+| &nbsp;&nbsp; </big></big></big>
+<!--
+
+=========================================MAINPAGE: ITINERARY================================================
+
+--><big><big><big><font size="+3"><big><big><big><a href="#itinerary" data-transition="slideup">itinerary</a></big></big></big></font></big></big></big></style="background-color:><big><big><big>&nbsp;&nbsp;
+| &nbsp; </big></big></big>
+<!--
+
+=========================================MAINPAGE: ABOUT===============================
+
+--><style="background-color: black;="" font-family:="" segoe="" ui="" light;=""><big><big><big><font size="+3"><big><big><big><a href="#about" data-transition="slideup">about</a></big></big></big></font></big></big></big></style="background-color:><big><big><big>
+&nbsp;&nbsp; &nbsp;</big></big></big><br>
+                <big><big> </big></big></li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
+  </ul>
+</ul>
+</div>
+</div>
+
+<!--
+
+=====================================GUIDE: PAGE 1================================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="guidepg1">
+<div data-role="content">
+<p style="background-color: black; font-family: Segoe UI Light;"><font size="+3"><big style="font-weight: bold;"><img style="width: 203px; height: 102px;" alt="guideheading" src="http://i1365.photobucket.com/albums/r750/pilbol/guideheader_zps18e6cebc.png"></big></font></p>
+<p style="background-color: black; font-family: Segoe UI Light; text-align: center;"><big style="font-weight: bold;"><a style="color: white;" href="Swiping%20code%2039copy2.html#guidepg1" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>1</big></big></big></big></big></big></big></big></a><big><big><big>
+&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big></big><a style="color: rgb(127, 127, 127);" href="Swiping%20code%2039copy2.html#guidepg2" data-transition="slide"><big style="font-weight: bold;"><big><big><big><big><big><big><big><big>2</big></big></big></big></big></big></big></big></big></a><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="Swiping%20code%2039copy2.html#guidepg3" data-transition="slide"><big><big><big><big><big><big><big><big>3</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold; color: rgb(127, 127, 127);"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="Swiping%20code%2039copy2.html#guidepg4" data-transition="slide"><big><big><big><big><big><big><big><big>4</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold; color: rgb(127, 127, 127);"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="Swiping%20code%2039copy2.html#guidepg5" data-transition="slide"><big><big><big><big><big><big><big><big>5</big></big></big></big></big></big></big></big></a></big>
+<big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><big><br>
+</big></big></big></font></big></big></big></big></big></font></big></big></big></p>
+<p style="background-color: black; font-family: Segoe UI Light; text-align: justify;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><big>On
+the itinerary page, pick the train line you are on.</big></big></big></font></big></big></big></big></big></font></big></big></big></p>
+<div style="text-align: center;"><big> </big><big> </big><big>
+</big></div>
+<ul>
+  <li> <br>
+  </li>
+</ul>
+<div style="text-align: center;"><img style="width: 727px; height: 688px;" alt="" src="http://i1365.photobucket.com/albums/r750/pilbol/guide1img_zps558c4d18.png"></div>
+<p style="background-color: black; font-family: Segoe UI Light;"> </p>
+<div style="text-align: center;"><big> </big><big> </big><big>
+</big></div>
+</div>
+</div>
+
+<!--
+
+========================================GUIDE: PAGE 2==========================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="guidepg2">
+<div data-role="content">
+<p style="background-color: black; font-family: Segoe UI Light;"><font size="+3"><big style="font-weight: bold;"><img style="width: 203px; height: 102px;" alt="guideheading" src="http://i1365.photobucket.com/albums/r750/pilbol/guideheader_zps18e6cebc.png"></big></font></p>
+<p style="background-color: black; font-family: Segoe UI Light; text-align: center;"><big style="font-weight: bold;"><a style="color: rgb(127, 127, 127);" href="#guidepg1" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>1</big></big></big></big></big></big></big></big></a><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; </big></big></big></big><a href="#guidepg2" data-transition="slide" data-direction="reverse"><big style="font-weight: bold;"><big><big><big><big><big><big><big><big>2</big></big></big></big></big></big></big></big></big></a><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg3" data-transition="slide"><big><big><big><big><big><big><big><big>3</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold; color: rgb(127, 127, 127);"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg4" data-transition="slide"><big><big><big><big><big><big><big><big>4</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold; color: rgb(127, 127, 127);"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg5" data-transition="slide"><big><big><big><big><big><big><big><big>5</big></big></big></big></big></big></big></big></a></big>
+<big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><big><br>
+</big></big></big></font></big></big></big></big></big></font></big></big></big></p>
+<p style="background-color: black; font-family: Segoe UI Light; text-align: justify;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><big>On
+the train line page, click the nearest MRT station with landmarks
+[denoted by the grey dot].</big></big></big></font></big></big></big></big></big></font></big></big></big></p>
+<div style="text-align: center;"><big> </big><big> </big><big>
+</big></div>
+<ul>
+  <li> <br>
+  </li>
+</ul>
+<div style="text-align: center;"><img style="width: 727px; height: 686px;" alt="" src="http://i1365.photobucket.com/albums/r750/pilbol/guide2img_zps11b08a66.png"><br>
+</div>
+</div>
+</div>
+
+<!--
+
+==============================GUIDE: PAGE 3==========================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="guidepg3">
+<div data-role="content">
+<p style="background-color: black; font-family: Segoe UI Light;"><font size="+3"><big style="font-weight: bold;"><img style="width: 203px; height: 102px;" alt="guideheading" src="http://i1365.photobucket.com/albums/r750/pilbol/guideheader_zps18e6cebc.png"></big></font></p>
+<p style="background-color: black; font-family: Segoe UI Light; text-align: center;"><big style="font-weight: bold; color: rgb(127, 127, 127);"><a style="color: rgb(127, 127, 127);" href="#guidepg1" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>1</big></big></big></big></big></big></big></big></a><big><big><big>
+&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg2" data-transition="slide" data-direction="reverse"><big style="font-weight: bold;"><big><big><big><big><big><big><big><big>2</big></big></big></big></big></big></big></big></big></a><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a href="#guidepg3" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>3</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg4" data-transition="slide"><big><big><big><big><big><big><big><big>4</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg5" data-transition="slide"><big><big><big><big><big><big><big><big>5</big></big></big></big></big></big></big></big></a></big>
+<big><big><big><big><font size="+3"><big><big><big><big><big><big><font size="+3"><big><big><big><big><big><small><small><br>
+</small></small></big></big></big></big></big></font></big></big></big></big></big></big></font></big></big></big></big></p>
+<p style="background-color: black; font-family: Segoe UI Light; text-align: justify;"><big><big><big><big><font size="+3"><big><big><big><big><big><big><font size="+3"><big><big><big><big><big><small><small>On
+the specific MRT station page, look for the difficulty scale at the top
+right. The higher the ranking, the harder it is to travel to the
+landmarks there.</small></small></big></big></big></big></big></font></big></big></big></big></big></big></font></big></big></big></big></p>
+<div style="text-align: center;"><big> </big><big> </big><big>
+</big></div>
+<ul>
+</ul>
+<div style="text-align: center;"><img style="width: 727px; height: 590px;" alt="" src="http://i1365.photobucket.com/albums/r750/pilbol/guide3img_zpsf28a4381.png"><br>
+</div>
+</div>
+</div>
+
+<!--
+
+======================================GUIDE: PAGE 4================================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="guidepg4">
+<div data-role="content">
+<p style="background-color: black; font-family: Segoe UI Light;"><font size="+3"><big style="font-weight: bold;"><img style="width: 203px; height: 102px;" alt="guideheading" src="http://i1365.photobucket.com/albums/r750/pilbol/guideheader_zps18e6cebc.png"></big></font></p>
+<div style="text-align: center;"><big style="font-weight: bold;"><a style="color: rgb(127, 127, 127);" href="#guidepg1" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>1</big></big></big></big></big></big></big></big></a><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; </big></big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg2" data-transition="slide" data-direction="reverse"><big style="font-weight: bold;"><big><big><big><big><big><big><big><big>2</big></big></big></big></big></big></big></big></big></a><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg3" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>3</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: white;" href="#guidepg4" data-transition="slide"><big><big><big><big><big><big><big><big>4</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="#guidepg5" data-transition="slide"><big><big><big><big><big><big><big><big>5</big></big></big></big></big></big></big></big></a></big></div>
+<p style="background-color: black; font-family: Segoe UI Light;"> </p>
+<div style="text-align: center;"><big> </big><big> </big><big>
+</big></div>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><big>Once
+you've identified what image you need to take for the app to recognise
+it, follow the directions and travel there. Use the camera icon below
+to recognise the image.</big></big></big></font></big></big></big></big></big></font></big></big></big></p>
+<div style="text-align: center;"><img style="width: 727px; height: 822px;" alt="" src="http://i1365.photobucket.com/albums/r750/pilbol/guide4img_zpsd95e2b62.png"><br>
+</div>
+<div style="text-align: center;">
+</div>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;">
+</p>
+</div>
+</div>
+
+<!--
+
+==========================GUIDE: PAGE 5====================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="guidepg5">
+<div data-role="content">
+<p style="background-color: black; font-family: Segoe UI Light;"><font size="+3"><big style="font-weight: bold;"><img style="width: 203px; height: 102px;" alt="guideheading" src="http://i1365.photobucket.com/albums/r750/pilbol/guideheader_zps18e6cebc.png"></big></font></p>
+<div style="text-align: center;"><big style="font-weight: bold;"><a style="color: rgb(127, 127, 127);" href="Swiping%20code%2039copy2.html#guidepg1" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>1</big></big></big></big></big></big></big></big></a><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp;&nbsp; </big></big></big></big><a style="color: rgb(127, 127, 127);" href="Swiping%20code%2039copy2.html#guidepg2" data-transition="slide" data-direction="reverse"><big style="font-weight: bold;"><big><big><big><big><big><big><big><big>2</big></big></big></big></big></big></big></big></big></a><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="Swiping%20code%2039copy2.html#guidepg3" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>3</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: rgb(127, 127, 127);" href="Swiping%20code%2039copy2.html#guidepg4" data-transition="slide" data-direction="reverse"><big><big><big><big><big><big><big><big>4</big></big></big></big></big></big></big></big></a></big><big style="font-weight: bold;"><big><big><big>&nbsp;
+&nbsp; &nbsp; &nbsp; </big></big></big><a style="color: white;" href="Swiping%20code%2039copy2.html#guidepg5" data-transition="slide"><big><big><big><big><big><big><big><big>5</big></big></big></big></big></big></big></big></a></big></div>
+<p style="background-color: black; font-family: Segoe UI Light;"> </p>
+<div style="text-align: center;"><big> </big><big> </big><big>
+</big></div>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><big>Hey
+presto! If image recognition is successful, you will reach the
+landmark's main page. If it isn't, try again when there's less
+disturbance [people, rain].</big></big></big></font></big></big></big></big></big></font></big></big></big></p>
+<div style="text-align: center;"><img style="width: 727px; height: 812px;" alt="" src="http://i1365.photobucket.com/albums/r750/pilbol/guide5img_zps0cd78137.png"></div>
+<p style="color: white; font-family: Segoe UI Light; background-color: black; text-align: right;"><big><big><big><font size="+3"><big><big><big>&nbsp;</big></big></big></font></big></big></big><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><a href="#mainpage" data-transition="flip">Return
+to Home&nbsp;</a></big></big></font></big></big></big></big></big></font></big></big></big></p>
+</div>
+</div>
+
+<!--
+
+==================================ITINERARY=================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; font-size: x-large; color: white;" data-role="page" id="itinerary">
+<div data-role="content">
+<p style="background-color: black; font-family: Segoe UI Light;"><big><big><big><big><font size="+3"><big><big><big><big><big style="font-weight: bold;"><small>itinerary <br>
+</small></big></big></big></big></big></font></big></big></big></big></p>
+<p style="background-color: black; font-family: Segoe UI Light;"><big><big><big><big><font size="+3"><big><big><big><big><big style="font-weight: bold;"><small><br>
+</small></big></big></big></big></big></font></big></big></big></big></p>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+<tbody>
+<tr>
+<td style="vertical-align: top; text-align: center;"><big style="font-weight: bold;"><big><big><big><big><big><a class="mrtlines" href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#NSline" data-transition="flip" tabindex="1">NS</a></big></big></big></big></big></big><br>
+<big><big><big><font size="+3"><big><big><big><big style="font-weight: bold;"><big> <br>
+</big></big></big></big></big></font></big></big></big></td>
+<td style="vertical-align: top; text-align: center;"><big><big><big style="font-weight: bold;"><big><big><big><a class="mrtlines" href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#EWline" data-transition="flip" tabindex="1">EW</a></big></big></big></big></big><br>
+</big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: center;"><big><br>
+<big style="font-weight: bold;"><big><big><big><big><a class="mrtlines" href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#CCline" data-transition="flip" tabindex="1">CC</a></big></big></big></big></big></big><big><br>
+</big></td>
+<td style="vertical-align: top; text-align: center;"><big><br>
+<big style="font-weight: bold;"><big><big><big><big><a class="mrtlines" href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#NEline" data-transition="flip" tabindex="1">NE</a></big></big></big></big></big></big><big><br>
+</big></td>
+</tr>
+</tbody>
+</table>
+<p style="background-color: black; font-family: Segoe UI Light;"><big><big><big><big><font size="+3"><big><big><big><big><big><small><small><br>
+</small></small></big></big></big></big></big></font></big></big></big></big></p>
+<p style="background-color: black; font-family: Segoe UI Light;"><big><big><big><big><font size="+3"><big><big><big><big><big><small><small>Which
+train line are you on/interested in exploring? Pick one of the above to
+find out more about the local attractions nearest to you.</small></small></big></big></big></big></big></font></big></big></big></big></p>
+<div style="text-align: right;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><br>
+<a href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#mainpage" data-transition="flip">Return
+to Home </a></big></big></font></big></big></big></big></big></font></big></big></big><br>
+</div>
+<p style="background-color: black; font-family: Segoe UI Light;"><big><big><big><big><font size="+3"><big><big><big><big><big style="font-weight: bold;"><small>
+<br>
+</small></big></big></big></big></big></font></big></big></big></big></p>
+<br>
+
+</div>
+</div>
+
+<!--
+
+==============================EW LINE===================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="EWline">
+<div data-role="content">
+<div style="position: relative; left: 0px; top: 0px; text-align: center;"><img alt="" style="position: relative; width: 970px; height: 1210px;" src="http://i1365.photobucket.com/albums/r750/pilbol/EWLine_zps026a82e8.png"><img style="top: 199px; left: 254px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(0);linkPage('Pasir Ris');"><img style="top: 584px; left: 254px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(1);linkPage('Tanah Merah');"><img style="top: 715px; left: 423px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(2);linkPage('Bugis');"><img style="top: 1088px; left: 254px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(3);linkPage('Paya Lebar');"><img style="top: 332px; left: 423px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(4);linkPage('Tanjong Pagar');"> <img style="top: 452px; left: 423px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(5);linkPage('Raffles Place');"><img style="top: 584px; left: 423px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(6);linkPage('City Hall');"><img style="top: 848px; left: 423px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(7);linkPage('Lavender');"><img style="top: 1088px; left: 594px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(8);linkPage('Jurong East');"><img style="top: 1088px; left: 763px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(9);linkPage('Chinese Garden');"><img style="top: 848px; left: 763px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(10);linkPage('Boon Lay');"><img style="top: 584px; left: 763px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(11);linkPage('Joo Koon');"></div>
+<p style="font-family: Segoe UI Light; background-color: black; text-align: right;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><a href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#mainpage" data-transition="flip">Return
+to Home&nbsp;</a></big></big></font></big></big></big></big></big></font></big></big></big></p>
+</div>
+</div>
+
+<!--
+
+==============================CC LINE===================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="CCline">
+<div data-role="content">
+<div style="position: relative; left: 0px; top: 0px; text-align: center;"><img alt="" style="position: relative; width: 970px; height: 1193px;" src="http://i1365.photobucket.com/albums/r750/pilbol/CCLine_zpsbab63942.png"><img style="top: 330px; left: 73px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(12);linkPage('Bayfront');"><img style="top: 197px; left: 252px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(13);linkPage('Dhoby Ghaut');"><img style="top: 330px; left: 252px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(14);linkPage('Bras Basah');"><img style="top: 417px; left: 252px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(15);linkPage('Esplanade');"> <img style="top: 550px; left: 252px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(16);linkPage('Promenade');"><img style="top: 683px; left: 252px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(17);linkPage('Nicoll Highway');"><img style="top: 1059px; left: 252px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(18);linkPage('Dakota');"><img style="top: 550px; left: 430px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(19);linkPage('Serangoon');"><img style="top: 803px; left: 430px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(20);linkPage('Tai Seng');"><img style="top: 427px; left: 608px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(21);linkPage('Botanic Gardens');"><img style="top: 560px; left: 608px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(22);linkPage('Farrer Road');"><img style="top: 937px; left: 608px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(23);linkPage('one-north');"><img style="top: 1059px; left: 787px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(24);linkPage('Haw Par Villa');"><img style="top: 937px; left: 787px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(25);linkPage('Pasir Panjang');"><img style="top: 693px; left: 787px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(26);linkPage('Telok Blangah');"><img style="top: 560px; left: 787px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button small" onclick="replaceImage(27);linkPage('HarbourFront');"></div>
+<p style="font-family: Segoe UI Light; background-color: black; text-align: right;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><a href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#mainpage" data-transition="flip">Return
+to Home&nbsp;</a></big></big></font></big></big></big></big></big></font></big></big></big></p>
+</div>
+</div>
+
+<!--
+
+======================================NS LINE=============================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="NSline">
+<div data-role="content">
+<div style="position: relative; left: 0px; top: 0px; text-align: center;"><img alt="" style="position: relative; width: 970px; height: 1385px;" src="http://i1365.photobucket.com/albums/r750/pilbol/NSLine_zps9d336f16.png"><img style="top: 205px; left: 193px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(28);linkPage('Jurong East');"><img style="top: 478px; left: 193px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(29);linkPage('Bukit Gombak');"><img style="top: 623px; left: 193px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(30);linkPage('Choa Chu Kang');"><img style="top: 944px; left: 193px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(31);linkPage('Kranji');"><img style="top: 205px; left: 578px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(32);linkPage('Toa Payoh');"> <img style="top: 478px; left: 578px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(33);linkPage('Newton');"><img style="top: 767px; left: 578px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(34);linkPage('Somerset');"><img style="top: 944px; left: 578px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(35);linkPage('Dhoby Ghaut');"><img style="top: 1088px; left: 578px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(36);linkPage('City Hall');"><img style="top: 1214px; left: 578px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(37);linkPage('Raffles Place');"></div>
+<p style="font-family: Segoe UI Light; background-color: black; text-align: right;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><a href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#mainpage" data-transition="flip">Return
+to Home&nbsp;</a></big></big></font></big></big></big></big></big></font></big></big></big></p>
+</div>
+</div>
+
+<!--
+
+======================================NE LINE=============================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="NEline">
+<div data-role="content">
+<div style="position: relative; left: 0px; top: 0px; text-align: center;"><img alt="" style="position: relative; width: 902px; height: 1171px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/NELine/NELine_zps2f141766.png"><img style="top: 172px; left: 168px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(38);linkPage('HarbourFront');"><img style="top: 430px; left: 168px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(39);linkPage('Chinatown');"><img style="top: 558px; left: 168px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(40);linkPage('Clarke Quay');"><img style="top: 690px; left: 168px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(41);linkPage('Dhoby Ghaut');"><img style="top: 813px; left: 168px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(42);linkPage('Little India');"> <img style="top: 815px; left: 633px;" src="http://i1302.photobucket.com/albums/ag123/HikaruSumika/SMP/greymrtbutton_zps1999e01f.png" alt="CLICK" class="button big" onclick="replaceImage(43);linkPage('Serangoon');"></div>
+<div style="text-align: right;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><br>
+<a href="Mainpage%20%5BCompleted%5D%20V2%20-%20Copy.html#mainpage" data-transition="flip">Return
+to Home&nbsp;</a></big></big></font></big></big></big></big></big></font></big></big></big></div>
+<p style="font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big> </big></big></big></font></big></big></big></p>
+
+</div>
+</div>
+
+<!--
+
+====================================ABOUT=================================
+
+-->
+<div style="background-color: black; font-family: Segoe UI Light; color: white;" data-role="page" id="about">
+<div data-role="content">
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><big><big><font size="+3"><big><big><big><big><big style="font-weight: bold;"><small>about
+the app</small></big><big><small><br>
+</small></big></big></big></big></big></font></big></big></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><big><big><font size="+3"><big><big><big><big><big><small>what</small></big></big></big></big></big></font></big></big></big></big><big><big><big><font size="+3"><big><big><big><br>
+</big></big></big></font></big></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big>A tourist
+- based app that provides itineraries
+and services using image recognition and requires the use of the train
+system.<br>
+</big></big></font></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><big><big><font size="+3"><big><big><big><big><big><small>who</small></big></big></big></big></big></font></big></big></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big>Tourists
+and anyone interested in exploring
+Singapore independently with a trusty tip from time to time.<br>
+</big></big></font></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><big><big><font size="+3"><big><big><big><big><big><small>when/where</small></big></big></big></big></big></font></big></big></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big>Any time,
+anywhere! As long as you have access to
+a MRT/LRT train station, that is - and you can travel anywhere in this
+island!<br>
+</big></big></font></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><big><big><font size="+3"><big><big><big><big><big><small>why</small></big></big></big></big></big></font></big></big></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big>This is a
+Science Mentorship Programme Project by
+Li Jia Yang, Ong Zhi Xin Charlotte and Shermaine Si Ying Ying from
+Raffles Girls' School (Secondary).</big></big></font></big></big></big></big></big></font></big></big></big></p>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;"><big><big><big><font size="+3"><big><big><big><br>
+</big></big></big></font></big></big></big></p>
+<div style="text-align: right;"><big><big><big><font size="+3"><big><big><big><big><big><font size="+3"><big><big><a href="#mainpage" data-transition="flip">Return
+to Home&nbsp;</a></big></big></font></big></big></big></big></big></font></big></big></big></div>
+<p style="color: white; font-family: Segoe UI Light; background-color: black;">
+</p>
+</div>
+</div>
+
+</body></html>
