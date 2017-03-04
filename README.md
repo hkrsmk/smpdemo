@@ -8,7 +8,7 @@ Known bugs:
 
 "Guide" section bugs:
 
-1. If you click on step x, then click on step y, then click on step x again, the screen blanks out.
+1. If you click on step x, then click on step y, then click on step x again, the screen blanks out. E.g. click on step 1, then click on step 4, then click on step 1 again. The screen will blank out.
 
 2. Swiping - swiping backwards once results in a blank screen. When swiped again, the screen will appear with the step 2 steps ago. E.g. swipe from step 3 to step 2: blank screen. Swipe again: step 1 appears.
 
