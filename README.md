@@ -8,7 +8,7 @@ Known bugs:
 
 2. "Return to Home" animation is glitchy
 
-"Guide" section bugs:
+"Guide" section bugs (refreshing will fix this):
 
 1. If you click on step x, then click on step y, then click on step x again, the screen blanks out. E.g. click on step 1, then click on step 4, then click on step 1 again. The screen will blank out.
 
