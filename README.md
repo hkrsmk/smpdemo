@@ -1,6 +1,6 @@
 This is a demo of my SMP project. Errors are kept as-is; the only thing done was to move everything over.
 
-Best viewed with internet explorer or chrome.
+Best viewed with Internet Explorer or Chrome.
 
 Known bugs:
 1. Firefox cannot recognise the font
