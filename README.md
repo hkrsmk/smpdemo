@@ -7,6 +7,9 @@ Known bugs:
 1. Firefox cannot recognise the font
 
 "Guide" section bugs:
+
 1. If you click on step x, then click on step y, then click on step x again, the screen blanks out.
+
 2. Swiping - swiping backwards once results in a blank screen. When swiped again, the screen will appear with the step 2 steps ago. E.g. swipe from step 3 to step 2: blank screen. Swipe again: step 1 appears.
+
 3. The scrolling on step 4 and 5 is unreliable. Zoom out for the "Return to Home" button to appear on step 5.
